@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Juegos · Lógica y Teoría de Conjuntos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">🏠 Inicio</a>
+        <a href="#memoria">🃏 Memoria</a>
+        <a href="#vf">❓ Verdadero/Falso</a>
+        <a href="#venn">🔵 Reto Venn</a>
+        <a href="#regiones">🗺️ Regiones</a>
+        <a href="#calc">🧮 Calculadora</a>
+    </nav>
+
+    <div class="hero" style="padding:34px 18px 50px">
+        <span class="pill">🎮 PARQUE DE JUEGOS · GRADOS 6° Y 11°</span>
+        <h1>¡APRENDE <span>JUGANDO!</span></h1>
+        <p class="quote">Cada acierto suma XP. Cada 100 XP subes de nivel y ganas medallas.</p>
+        <div class="kidstrip" data-kids="3,0,5,2,1,4"></div>
+        <a class="back" href="index.html">← Volver a la unidad</a>
+    </div>
+
+    <section id="memoria">
+        <div class="gamehead"><span data-kid="1"></span>
+            <h2>🃏 Memoria de símbolos</h2><span data-kid="4"></span>
+        </div>
+        <p class="sub">Une cada símbolo con su nombre. Gana 50 XP al completar todas las parejas.</p>
+        <div class="mem" id="mem"></div>
+        <p id="mmsg" style="text-align:center;font-weight:700"></p>
+    </section>
+
+    <section id="vf">
+        <div class="gamehead"><span data-kid="2"></span>
+            <h2>❓ Verdadero o Falso</h2><span data-kid="5"></span>
+        </div>
+        <p class="sub">10 afirmaciones. Con 7 o más aciertos ganas la medalla «Mente lógica».</p>
+        <div class="q" id="q"></div>
+    </section>
+
+    <section id="venn">
+        <div class="gamehead"><span data-kid="0"></span>
+            <h2>🔵 Reto Venn</h2><span data-kid="3"></span>
+        </div>
+        <p class="sub">Observa el diagrama y elige la respuesta correcta. Con 5 o más aciertos ganas la medalla
+            «Cazador de regiones».</p>
+        <div class="q">
+            <p style="margin:0"><b>U = {1, …, 10} · A = {1, 2, 3, 4, 5} · B = {4, 5, 6, 7}</b></p>
+            <svg viewBox="0 0 260 130" style="max-width:300px;width:100%">
+                <rect x="2" y="2" width="256" height="126" rx="8" fill="#fff" stroke="#333" stroke-width="2" />
+                <circle cx="105" cy="62" r="46" fill="#7b4dff" fill-opacity=".45" stroke="#7b4dff" />
+                <circle cx="150" cy="62" r="46" fill="#f5a623" fill-opacity=".45" stroke="#f5a623" />
+                <text x="62" y="66" font-weight="700">1 2 3</text>
+                <text x="118" y="66" font-weight="700">4 5</text>
+                <text x="168" y="66" font-weight="700">6 7</text>
+                <text x="205" y="112" font-weight="700">8 9 10</text>
+                <text x="60" y="26" font-weight="700">A</text><text x="190" y="26" font-weight="700">B</text>
+            </svg>
+            <div id="vq"></div>
+        </div>
+    </section>
+
+    <section id="regiones">
+        <div class="gamehead"><span data-kid="2"></span>
+            <h2>🗺️ Selecciona las regiones</h2><span data-kid="5"></span>
+        </div>
+        <p class="sub">Te damos una expresión y tú tocas, en el diagrama, todas las regiones que la representan. Con 5
+            o más aciertos ganas la medalla «Cartógrafo de Venn».</p>
+        <div class="q" id="rg"></div>
+    </section>
+
+    <section id="calc">
+        <div class="gamehead"><span data-kid="4"></span>
+            <h2>🧮 Calculadora de conjuntos</h2><span data-kid="1"></span>
+        </div>
+        <p class="sub">Escribe tus propios conjuntos y descubre sus operaciones.</p>
+        <div class="q">
+            <p>Escribe elementos separados por comas.</p><input id="ca" placeholder="A: 1,2,3,4"><input id="cb"
+                placeholder="B: 3,4,5,6"><input id="cu" placeholder="U: 1,2,3,4,5,6,7,8"><br><button class="btn"
+                onclick="calc()">Calcular</button>
+            <div id="cr" style="text-align:left"></div>
+        </div>
+    </section>
+
+    <footer>🎮 Juegos · Lógica y Teoría de Conjuntos · <a href="index.html" style="color:#ffc93c">Volver al inicio</a>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="juegos.js"></script>
+</body>
+
+</html>

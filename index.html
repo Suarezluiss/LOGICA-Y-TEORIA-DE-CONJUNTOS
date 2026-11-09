@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Lógica y Teoría de Conjuntos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENÚ: 4 botones principales + desplegable con TODAS las secciones -->
+    <nav>
+        <a href="#objetivos">🎯 Objetivos</a>
+        <a href="#marco">📖 Marco teórico</a>
+        <a href="#actividades">🧭 Actividades</a>
+        <a href="juegos.html">🎮 Juegos</a>
+        <details class="navmore">
+            <summary>☰ Más secciones</summary>
+            <div>
+                <a href="#objetivos">🎯 Objetivos</a>
+                <a href="#marco">📖 Marco teórico</a>
+                <a href="#historia">🧑‍🔬 Historia</a>
+                <a href="#ejemplos">🧩 Ejemplos</a>
+                <a href="#videos">🎬 Videos</a>
+                <a href="#retos">💡 Curiosidades</a>
+                <a href="#actividades">🧭 Actividades</a>
+                <a href="#juegos">🎮 Juegos</a>
+                <a href="#logros">🏅 Logros</a>
+                <a href="#rubrica">📋 Rúbrica</a>
+            </div>
+        </details>
+    </nav>
+
+    <!-- PORTADA: solo 4 botones -->
+    <div class="hero"><span class="pill">📚 UNIDAD DIDÁCTICA VIRTUAL · GRADOS 6° Y 11°</span>
+        <h1>LÓGICA Y <span>TEORÍA DE CONJUNTOS</span></h1>
+        <p class="quote">✨ «Las matemáticas no se miran: se piensan, se crean y se disfrutan.» ✨</p>
+        <div class="kidstrip" data-kids="0,1,2,3,4,5"></div>
+        <div class="hbtns">
+            <a class="hb" style="--c:#7b4dff" href="#objetivos"><i>🎯</i>Objetivos<small>¿Qué aprenderás?</small></a>
+            <a class="hb" style="--c:#e8467c" href="#marco"><i>📖</i>Marco teórico<small>Conceptos clave</small></a>
+            <a class="hb" style="--c:#f5a623" href="#actividades"><i>🧭</i>Actividades<small>La Brújula del
+                    Razonamiento</small></a>
+            <a class="hb" style="--c:#1fb58f" href="juegos.html"><i>🎮</i>Juegos<small>Gana XP y medallas</small></a>
+        </div>
+    </div>
+
+    <section id="objetivos">
+        <h2>🎯 ¿QUÉ APRENDERÁS?</h2>
+        <h2 style="color:#7b4dff">Objetivos de Aprendizaje</h2>
+        <p class="sub">Al finalizar esta unidad, serás capaz de alcanzar los siguientes logros en Lógica y Teoría de
+            Conjuntos, en articulación con los Estándares Básicos de Competencias (MEN).</p>
+        <figure class="scenefig"><img loading="lazy"
+                src="https://freesvg.org/img/1575741189Boy-And-Girl-Students-colour.png"
+                alt="Niña y niño caminando a la escuela con mochilas" data-scene="school" onerror="window.fb&&fb(this)">
+            <figcaption>¡Bienvenidos! Vamos a aprender conjuntos jugando</figcaption>
+        </figure>
+        <div class="grid">
+            <div class="card" style="--c:#7b4dff">
+                <h3>🔢 1. Conceptual</h3><b>Comprender y clasificar la estructura de los conjuntos.</b>
+                <ul>
+                    <li>Definir formalmente el concepto de conjunto bien definido y diferenciar sus criterios de
+                        determinación (por extensión y por comprensión).</li>
+                    <li>Reconocer las relaciones fundamentales entre elementos y conjuntos (pertenencia ∈) y entre
+                        conjuntos (inclusión ⊆).</li>
+                    <li>Clasificar conjuntos según su número de elementos en finitos e infinitos (distinguiendo entre el
+                        conjunto vacío, conjuntos finitos y conjuntos infinitos).</li>
+                </ul>
+            </div>
+            <div class="card" style="--c:#f5a623">
+                <h3>⚙️ 2. Procedimental</h3><b>Operar conjuntos y realizar demostraciones lógicas.</b>
+                <ul>
+                    <li>Resolver analítica y gráficamente las operaciones de Unión (∪), Intersección (∩), Diferencia (∖)
+                        y Complemento (Aᶜ).</li>
+                    <li>Construir e interpretar Diagramas de Venn para representar relaciones lógicas entre conjuntos.
+                    </li>
+                    <li>Aplicar el método de doble inclusión (A ⊆ B ∧ B ⊆ A) y las equivalencias de la lógica
+                        proposicional para demostrar las Leyes de De Morgan y propiedades algebraicas.</li>
+                </ul>
+            </div>
+            <div class="card" style="--c:#1fb58f">
+                <h3>🌎 3. Contextual</h3><b>Resolver situaciones problema mediante el pensamiento lógico.</b>
+                <ul>
+                    <li>Modelar situaciones del entorno real mediante expresiones conjuntistas y cuantificadores
+                        lógicos.</li>
+                    <li>Resolver problemas de conteo, clasificación y categorización de datos utilizando diagramas y
+                        operaciones de conjuntos.</li>
+                </ul>
+            </div>
+            <div class="card" style="--c:#e8467c">
+                <h3>🤝 4. Actitudinal</h3><b>Fomentar la confianza y el rigor en la argumentación.</b>
+                <ul>
+                    <li>Desarrollar rigor lógico al comunicar razonamientos y estructurar demostraciones matemáticas.
+                    </li>
+                    <li>Promover el trabajo colaborativo en la solución de acertijos lógicos y problemas con diagramas
+                        de conjuntos.</li>
+                    <li>Mostrar perseverancia y disposición ante el análisis de problemas abstractos.</li>
+                </ul>
+            </div>
+        </div>
+        <p style="text-align:center"><a class="btn" style="background:#7b4dff;color:#fff" href="#marco">👉 Ver conceptos
+                claves</a></p>
+    </section>
+
+    <section id="marco">
+        <h2>📖 MARCO TEÓRICO</h2>
+        <h2 style="color:#e8467c">Conceptos Clave</h2>
+        <p class="sub">Haz clic en cada tarjeta para explorar los temas. ¡Todo a tu ritmo!</p>
+        <figure class="scenefig"><img loading="lazy" src="https://freesvg.org/img/Children.png"
+                alt="Niños aprendiendo juntos" data-scene="read" onerror="window.fb&&fb(this)">
+            <figcaption>Aprender en equipo es más divertido</figcaption>
+        </figure>
+        <div class="two">
+
+            <!-- 1 -->
+            <details style="--c:#5035d0" open>
+                <summary>🔢 1. ¿Qué es un Conjunto?</summary>
+                <div>
+                    <ul>
+                        <li><b>Definición:</b> Un conjunto es una colección bien definida de objetos llamados elementos.
+                            Que esté "bien definida" significa que existe un criterio objetivo para decidir si un objeto
+                            pertenece (x ∈ A) o no pertenece (x ∉ A) al conjunto.</li>
+                        <li><b>Notación:</b> Los conjuntos se nombran con letras mayúsculas (A, B, C) y sus elementos se
+                            encierran entre llaves ({…}).</li>
+                        <li><b>Formas de Determinación:</b>
+                            <ul>
+                                <li><b>Por Extensión:</b> Se listan todos los elementos explícitamente. Ej: A = {2, 4,
+                                    6, 8}.</li>
+                                <li><b>Por Comprensión:</b> Se indica la propiedad predicativa P(x) que cumplen
+                                    únicamente sus elementos. Ej: A = {x ∈ ℕ | x es par ∧ x ≤ 8}.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="figs">
+                        <figure><svg viewBox="0 0 220 110">
+                                <rect x="2" y="2" width="216" height="106" rx="6" fill="#fff" stroke="#333"
+                                    stroke-width="2" />
+                                <ellipse cx="80" cy="55" rx="60" ry="38" fill="#d9ccff" stroke="#7b4dff"
+                                    stroke-width="2" /><text x="55" y="50" font-size="15">2 4</text><text x="55" y="72"
+                                    font-size="15">6 8</text><text x="140" y="45" font-size="15">1 3</text><text x="140"
+                                    y="72" font-size="15">5 7</text><text x="22" y="25" font-weight="700">A</text>
+                            </svg>
+                            <figcaption>2 ∈ A · 3 ∉ A</figcaption>
+                        </figure>
+                        <figure class="ph"><img loading="lazy"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Venn_diagram_gr_la_ru.svg?width=320"
+                                alt="Conjuntos de letras griegas, latinas y rusas representados con círculos"
+                                data-fb="Un conjunto es una colección" data-k="0" onerror="window.fb&&fb(this)">
+                            <figcaption>Un conjunto agrupa elementos: letras que comparten alfabetos</figcaption>
+                        </figure>
+                    </div>
+                    <div class="kidsay"><span data-kid="0"></span>
+                        <p>Mi mochila es un conjunto: lápiz, cuaderno y borrador son sus elementos.</p>
+                    </div>
+                    <div class="more"><b>➕ Para ampliar</b>
+                        <ul>
+                            <li>Más ejemplos: C = {rojo, azul, amarillo} y D = {x ∈ ℕ | 1 ≤ x ≤ 4} = {1, 2, 3, 4}.</li>
+                            <li>El orden y las repeticiones no importan: {1, 2, 3} = {3, 2, 1} = {1, 1, 2, 3}.</li>
+                            <li>Un conjunto <b>no está bien definido</b> si el criterio es subjetivo, como "los números
+                                bonitos".</li>
+                        </ul>
+                    </div>
+                    <div class="fact"><b>✅ Dato verificado</b>
+                        <ul>
+                            <li>El matemático alemán Georg Cantor (1845-1918) fue quien dio origen a la teoría de
+                                conjuntos; en 1895 la describió como una reunión en un todo de objetos bien
+                                diferenciados de nuestra intuición o pensamiento.</li>
+                            <li>El símbolo ∈ lo introdujo Giuseppe Peano en 1889; viene de la letra griega épsilon (ε),
+                                inicial de la palabra griega «ἐστί» («es»).</li>
+                            <li>Que el orden y las repeticiones no importen es consecuencia del principio de
+                                <b>extensionalidad</b>: dos conjuntos son iguales si y solo si tienen los mismos
+                                elementos.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+
+            <!-- 2 -->
+            <details style="--c:#9b59b6">
+                <summary>🔀 2. Simbología y Relaciones Fundamentales</summary>
+                <div>
+                    <ul>
+                        <li><b>Pertenencia (∈):</b> Relaciona un elemento con un conjunto. Ej: Si A = {1, 3, 5},
+                            entonces 3 ∈ A y 4 ∉ A.</li>
+                        <li><b>Inclusión / Subconjunto (⊆):</b> Relaciona un conjunto con otro conjunto.<div class="f">A
+                                ⊆ B ⟺ ∀x (x ∈ A ⟹ x ∈ B)</div>(Todo elemento de A también pertenece a B).</li>
+                        <li><b>Igualdad de Conjuntos (=):</b> Dos conjuntos son iguales si tienen exactamente los mismos
+                            elementos.</li>
+                        <li><b>Método de Doble Inclusión:</b> A = B ⟺ (A ⊆ B ∧ B ⊆ A).</li>
+                    </ul>
+                    <div class="figs">
+                        <figure class="ph"><img loading="lazy"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Venn_A_subset_B.svg?width=320"
+                                alt="Diagrama de Venn: el conjunto A dentro del conjunto B (A ⊆ B)"
+                                data-fb="A ⊆ B: A está dentro de B" data-k="1" onerror="window.fb&&fb(this)">
+                            <figcaption>A ⊆ B: el círculo A queda dentro del círculo B</figcaption>
+                        </figure>
+                    </div>
+                    <div class="kidsay"><span data-kid="1"></span>
+                        <p>Mi curso (A) está dentro del colegio (B): ¡todos los de mi curso son del colegio! A ⊆ B.</p>
+                    </div>
+                    <div class="more"><b>➕ Para ampliar</b>
+                        <ul>
+                            <li><b>∈ vs ⊆:</b> 3 ∈ {1, 3, 5}, pero {3} ⊆ {1, 3, 5}. El primero relaciona elemento y
+                                conjunto; el segundo, conjunto y conjunto.</li>
+                            <li><b>Subconjunto propio (⊂):</b> A ⊂ B si A ⊆ B y A ≠ B.</li>
+                            <li>Un conjunto con n elementos tiene 2ⁿ subconjuntos. Ej: {a, b} tiene 4: ∅, {a}, {b}, {a,
+                                b}.</li>
+                        </ul>
+                    </div>
+                    <div class="fact"><b>✅ Dato verificado</b>
+                        <ul>
+                            <li>En la teoría axiomática de Zermelo–Fraenkel (ZF), la igualdad de conjuntos se
+                                fundamenta en el axioma de extensionalidad, que es justamente el método de doble
+                                inclusión.</li>
+                            <li>La inclusión es <b>reflexiva</b> (A ⊆ A), <b>antisimétrica</b> (A ⊆ B y B ⊆ A ⟹ A = B)
+                                y <b>transitiva</b> (A ⊆ B y B ⊆ C ⟹ A ⊆ C).</li>
+                            <li>En distintos textos, el símbolo ⊂ puede significar «subconjunto» (incluso igual) o
+                                «subconjunto propio»; por eso ⊆ y ⊊ se usan para evitar confusiones.</li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+
+            <!-- 3 -->
+            <details style="--c:#e67e22">
+                <summary>📊 3. Clases de Conjuntos (Finitos vs. Infinitos)</summary>
+                <div>
+                    <ul>
+                        <li><b>Conjunto Vacío (∅ o {}):</b> Es el conjunto que no posee ningún elemento. Por definición,
+                            el conjunto vacío es subconjunto de cualquier conjunto (∅ ⊆ A).</li>
+                        <li><b>Conjunto Finito:</b> Es aquel cuyo número de elementos (cardinalidad |A|) se puede contar
+                            mediante un número natural n ∈ ℕ. Ej: B = {a, e, i, o, u} ⟹ |B| = 5.</li>
+                        <li><b>Conjunto Infinito:</b> Es aquel que no es finito; su número de elementos es ilimitado.
+                        </li>
+                        <li><b>Ejemplos de conjuntos infinitos de números:</b> Los números naturales (ℕ), enteros (ℤ),
+                            racionales (ℚ) y reales (ℝ).</li>
+                    </ul>
+                    <div class="figs">
+                        <figure><svg viewBox="0 0 220 130">
+                                <ellipse cx="110" cy="65" rx="105" ry="60" fill="#ffd9e6" stroke="#e8467c"
+                                    stroke-width="2" />
+                                <ellipse cx="110" cy="75" rx="80" ry="45" fill="#fff0c2" stroke="#f5a623"
+                                    stroke-width="2" />
+                                <ellipse cx="110" cy="85" rx="55" ry="30" fill="#c8f2e6" stroke="#1fb58f"
+                                    stroke-width="2" />
+                                <ellipse cx="110" cy="92" rx="30" ry="17" fill="#d9ccff" stroke="#7b4dff"
+                                    stroke-width="2" /><text x="110" y="22" text-anchor="middle"
+                                    font-weight="700">ℝ</text><text x="110" y="44" text-anchor="middle"
+                                    font-weight="700">ℚ</text><text x="110" y="68" text-anchor="middle"
+                                    font-weight="700">ℤ</text><text x="110" y="97" text-anchor="middle"
+                                    font-weight="700">ℕ</text>
+                            </svg>
+                            <figcaption>ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ</figcaption>
+                        </figure>
+                        <figure class="ph"><img loading="lazy"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Hilbert%27s_Hotel.svg?width=320"
+                                alt="Ilustración del Hotel infinito de Hilbert" data-fb="El hotel infinito de Hilbert"
+                                data-k="2" onerror="window.fb&&fb(this)">
+                            <figcaption>El hotel infinito de Hilbert: siempre cabe un huésped más</figcaption>
+                        </figure>
+                    </div>
+                    <div class="kidsay"><span data-kid="2"></span>
+                        <p>Un salón vacío no tiene a nadie: es ∅. ¡Pero una caja con un solo juguete ya es {juguete}!
+                        </p>
+                    </div>
+                    <div class="more"><b>➕ Para ampliar</b>
+                        <ul>
+                            <li><b>Conjunto unitario:</b> tiene un solo elemento. Ej: {7}.</li>
+                            <li>∅ no es lo mismo que {∅}: el primero no tiene elementos y el segundo tiene uno.</li>
+                            <li>Ej: C = {x ∈ ℕ | x es múltiplo de 5} es infinito: {5, 10, 15, …}.</li>
+                        </ul>
+                    </div>
+                    <div class="fact"><b>✅ Dato verificado</b>
+                        <ul>
+                            <li>El símbolo ∅ fue propuesto por André Weil (grupo Bourbaki) en 1939, inspirado en la
+                                letra Ø de los alfabetos danés y noruego.</li>
+                            <li>Un conjunto es infinito si se puede poner en correspondencia biunívoca (biyección) con
+                                una parte propia de sí mismo. Ej: n ↦ 2n relaciona ℕ con los números pares.</li>
+                            <li>ℕ y ℤ tienen la misma cardinalidad (ℵ₀): se pueden ordenar como 0, 1, −1, 2, −2, 3, −3…
+                            </li>
+                            <li>El «Hotel de Hilbert» es una analogía del matemático David Hilbert para explicar que un
+                                infinito numerable «lleno» aún puede recibir nuevos elementos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+
+            <!-- 4 -->
+            <details style="--c:#16a085">
+                <summary>🔗 4. Operaciones Entre Conjuntos</summary>
+                <div>
+                    <ul>
+                        <li><b>Unión (A ∪ B):</b> Conjunto de elementos que están en A, en B o en ambos.<div class="f">A
+                                ∪ B = {x | x ∈ A ∨ x ∈ B}</div>
+                        </li>
+                        <li><b>Intersección (A ∩ B):</b> Conjunto de elementos comunes que pertenecen simultáneamente a
+                            A y a B.<div class="f">A ∩ B = {x | x ∈ A ∧ x ∈ B}</div>(Si A ∩ B = ∅, los conjuntos se
+                            llaman disjuntos).</li>
+                        <li><b>Diferencia (A ∖ B o A − B):</b> Elementos que pertenecen a A pero no a B.<div class="f">A
+                                ∖ B = {x | x ∈ A ∧ x ∉ B}</div>
+                        </li>
+                        <li><b>Complemento (Aᶜ o A'):</b> Elementos del conjunto universal U que no están en A.<div
+                                class="f">Aᶜ = {x ∈ U | x ∉ A}</div>
+                        </li>
+                    </ul>
+                    <div class="figs">
+                        <figure><svg viewBox="0 0 160 100">
+                                <rect x="2" y="2" width="156" height="96" rx="6" fill="#fff" stroke="#333"
+                                    stroke-width="2" />
+                                <circle cx="62" cy="50" r="32" fill="#7b4dff" fill-opacity=".6" />
+                                <circle cx="98" cy="50" r="32" fill="#7b4dff" fill-opacity=".6" />
+                            </svg>
+                            <figcaption>A ∪ B</figcaption>
+                        </figure>
+                        <figure><svg viewBox="0 0 160 100">
+                                <rect x="2" y="2" width="156" height="96" rx="6" fill="#fff" stroke="#333"
+                                    stroke-width="2" />
+                                <circle cx="62" cy="50" r="32" fill="none" stroke="#333" />
+                                <circle cx="98" cy="50" r="32" fill="none" stroke="#333" />
+                                <clipPath id="cp">
+                                    <circle cx="62" cy="50" r="32" />
+                                </clipPath>
+                                <circle cx="98" cy="50" r="32" fill="#1fb58f" clip-path="url(#cp)" />
+                            </svg>
+                            <figcaption>A ∩ B</figcaption>
+                        </figure>
+                        <figure><svg viewBox="0 0 160 100">
+                                <rect x="2" y="2" width="156" height="96" rx="6" fill="#fff" stroke="#333"
+                                    stroke-width="2" />
+                                <circle cx="62" cy="50" r="32" fill="#f5a623" />
+                                <circle cx="98" cy="50" r="32" fill="#fff" stroke="#333" />
+                            </svg>
+                            <figcaption>A ∖ B</figcaption>
+                        </figure>
+                        <figure><svg viewBox="0 0 160 100">
+                                <rect x="2" y="2" width="156" height="96" rx="6" fill="#e8467c" stroke="#333"
+                                    stroke-width="2" />
+                                <circle cx="62" cy="50" r="32" fill="#fff" stroke="#333" />
+                            </svg>
+                            <figcaption>Aᶜ</figcaption>
+                        </figure>
+                        <figure><img loading="lazy"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Venn0001.svg?width=260"
+                                alt="Intersección (imagen por link)" data-fb="Intersección" data-k="3"
+                                onerror="window.fb&&fb(this)">
+                            <figcaption>Intersección (imagen por link)</figcaption>
+                        </figure>
+                        <figure><img loading="lazy"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Venn0111.svg?width=260"
+                                alt="Unión (imagen por link)" data-fb="Unión" data-k="4" onerror="window.fb&&fb(this)">
+                            <figcaption>Unión (imagen por link)</figcaption>
+                        </figure>
+                        <figure><img loading="lazy"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Venn0110.svg?width=260"
+                                alt="Diferencia simétrica (imagen por link)" data-fb="Diferencia simétrica" data-k="5"
+                                onerror="window.fb&&fb(this)">
+                            <figcaption>A Δ B (imagen por link)</figcaption>
+                        </figure>
+                    </div>
+                    <div class="kidsay"><span data-kid="3"></span>
+                        <p>Si Ana y yo juntamos nuestras canicas, hacemos la unión. Las que ambos tenemos iguales son la
+                            intersección.</p>
+                    </div>
+                    <div class="more"><b>➕ Para ampliar</b>
+                        <ul>
+                            <li><b>Ejemplo:</b> A = {1, 2, 3, 4} y B = {3, 4, 5, 6}.<br>A ∪ B = {1, 2, 3, 4, 5, 6} · A ∩
+                                B = {3, 4} · A ∖ B = {1, 2} · B ∖ A = {5, 6}</li>
+                            <li><b>Diferencia simétrica:</b> A Δ B = (A ∖ B) ∪ (B ∖ A) = {1, 2, 5, 6}.</li>
+                            <li><b>Cardinalidad de la unión:</b> |A ∪ B| = |A| + |B| − |A ∩ B|.</li>
+                        </ul>
+                    </div>
+                    <div class="fact"><b>✅ Dato verificado</b>
+                        <ul>
+                            <li>Los símbolos ∪ e ∩ fueron introducidos por Giuseppe Peano en 1888.</li>
+                            <li>Para tres conjuntos se cumple el principio de inclusión–exclusión: |A ∪ B ∪ C| = |A| +
+                                |B| + |C| − |A ∩ B| − |A ∩ C| − |B ∩ C| + |A ∩ B ∩ C|.</li>
+                            <li>La diferencia A ∖ B también se puede escribir como A ∩ Bᶜ (la demuestras en la Brújula
+                                del Razonamiento, nivel difícil).</li>
+                            <li>El producto cartesiano A × B es otra operación: reúne todos los pares ordenados (a, b)
+                                con a ∈ A y b ∈ B.</li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+
+            <!-- 5 -->
+            <details style="--c:#d35400">
+                <summary>🖼️ 5. Diagramas de Venn y Razonamiento Lógico</summary>
+                <div>
+                    <ul>
+                        <li><b>Diagramas de Venn:</b> Representaciones gráficas planas (usualmente círculos dentro de un
+                            rectángulo que representa el Universo U) utilizadas para visualizar relaciones de inclusión,
+                            intersección y áreas sombreadas de operaciones conjuntistas.</li>
+                        <li><b>Conexión entre Lógica y Conjuntos:</b>
+                            <ul>
+                                <li>La Unión (∪) equivale a la disyunción lógica O (∨).</li>
+                                <li>La Intersección (∩) equivale a la conjunción lógica Y (∧).</li>
+                                <li>El Complemento (Aᶜ) equivale a la negación lógica NO (¬).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <svg viewBox="0 0 300 150" style="max-width:300px;display:block;margin:auto">
+                        <rect x="5" y="5" width="290" height="140" fill="#fff8e1" stroke="#d35400" stroke-width="3"
+                            rx="8" />
+                        <circle cx="120" cy="75" r="50" fill="#7b4dff" fill-opacity=".5" />
+                        <circle cx="180" cy="75" r="50" fill="#e8467c" fill-opacity=".5" /><text x="95" y="80"
+                            font-weight="700">A</text><text x="195" y="80" font-weight="700">B</text><text x="268"
+                            y="135" font-weight="700">U</text>
+                    </svg>
+                    <div class="figs">
+                        <figure class="ph"><img loading="lazy"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/John_Venn.jpg?width=300"
+                                alt="Retrato de John Venn" data-fb="John Venn" data-k="0" onerror="window.fb&&fb(this)">
+                            <figcaption>John Venn, creador de los diagramas que llevan su nombre</figcaption>
+                        </figure>
+                    </div>
+                    <div class="kidsay"><span data-kid="4"></span>
+                        <p>En mi salón, el círculo de «fútbol» y el de «baloncesto» se cruzan donde están los que juegan
+                            ambos.</p>
+                    </div>
+                    <div class="more"><b>➕ Para ampliar</b>
+                        <ul>
+                            <li><b>Cómo se dibuja:</b> 1) rectángulo para U; 2) un círculo por conjunto; 3) si comparten
+                                elementos, los círculos se cruzan; 4) se sombrea la región pedida.</li>
+                            <li><b>Ejemplo de la vida real:</b> en un curso, F = quienes juegan fútbol y K = quienes
+                                juegan baloncesto. F ∩ K son quienes practican ambos deportes.</li>
+                            <li><b>Equivalencias:</b> ⊆ ↔ ⟹ (implicación) · = ↔ ⟺ (equivalencia).</li>
+                        </ul>
+                    </div>
+                    <div class="fact"><b>✅ Dato verificado</b>
+                        <ul>
+                            <li>John Venn presentó sus diagramas en 1880 en un artículo de la revista <i>Philosophical
+                                    Magazine</i>. El nombre «diagrama de Venn» se popularizó después, desde el filósofo
+                                Clarence Irving Lewis (1918).</li>
+                            <li>Antes, Leonhard Euler (siglo XVIII) ya usaba círculos para ilustrar razonamientos
+                                lógicos; por eso a veces se habla de «diagramas de Euler».</li>
+                            <li>Con n conjuntos, un diagrama de Venn completo debe mostrar 2ⁿ regiones: con 2 círculos
+                                hay 4 regiones (incluida la exterior) y con 3 círculos hay 8.</li>
+                            <li>Estas ideas conectan la lógica con la electrónica: las compuertas AND, OR y NOT de los
+                                circuitos digitales siguen ∩, ∪ y complemento.</li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+
+            <!-- 6 -->
+            <details style="--c:#27ae60">
+                <summary>⚖️ 6. Leyes de De Morgan y Propiedades Algebraicas</summary>
+                <div>
+                    <ul>
+                        <li><b>Leyes de De Morgan:</b>
+                            <ul>
+                                <li>El complemento de la unión es la intersección de los complementos:<div class="f">(A
+                                        ∪ B)ᶜ = Aᶜ ∩ Bᶜ</div>
+                                </li>
+                                <li>El complemento de la intersección es la unión de los complementos:<div class="f">(A
+                                        ∩ B)ᶜ = Aᶜ ∪ Bᶜ</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><b>Propiedades de las Operaciones:</b>
+                            <ul>
+                                <li><b>Conmutativa:</b> A ∪ B = B ∪ A y A ∩ B = B ∩ A</li>
+                                <li><b>Asociativa:</b> (A ∪ B) ∪ C = A ∪ (B ∪ C)</li>
+                                <li><b>Distributiva:</b> A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="figs">
+                        <figure><svg viewBox="0 0 160 100">
+                                <rect x="2" y="2" width="156" height="96" rx="6" fill="#3b82f6" stroke="#333"
+                                    stroke-width="2" />
+                                <circle cx="62" cy="50" r="32" fill="#fff" stroke="#333" />
+                                <circle cx="98" cy="50" r="32" fill="#fff" stroke="#333" />
+                            </svg>
+                            <figcaption>(A ∪ B)ᶜ</figcaption>
+                        </figure>
+                        <figure class="ph"><img loading="lazy"
+                                src="https://commons.wikimedia.org/wiki/Special:FilePath/Augustus_De_Morgan_(1806-1871).jpg?width=300"
+                                alt="Retrato de Augustus De Morgan" data-fb="Augustus De Morgan" data-k="1"
+                                onerror="window.fb&&fb(this)">
+                            <figcaption>Augustus De Morgan (1806-1871)</figcaption>
+                        </figure>
+                    </div>
+                    <div class="kidsay"><span data-kid="5"></span>
+                        <p>«No tengo perro ni gato» es lo mismo que «no tengo perro» y además «no tengo gato». ¡Eso es
+                            De
+                            Morgan!</p>
+                    </div>
+                    <div class="more"><b>➕ Para ampliar</b>
+                        <ul>
+                            <li><b>Más propiedades:</b> Idempotente A ∪ A = A · Identidad A ∪ ∅ = A y A ∩ U = A · Doble
+                                complemento (Aᶜ)ᶜ = A · A ∪ Aᶜ = U · A ∩ Aᶜ = ∅ · Absorción A ∪ (A ∩ B) = A</li>
+                            <li><b>Otra distributiva:</b> A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C).</li>
+                            <li><b>Comprobación numérica:</b> U = {1, …, 6}, A = {1, 2}, B = {2, 3}. (A ∪ B)ᶜ = {4, 5,
+                                6} y Aᶜ ∩ Bᶜ = {3, 4, 5, 6} ∩ {1, 4, 5, 6} = {4, 5, 6} ✔</li>
+                        </ul>
+                    </div>
+                    <div class="fact"><b>✅ Dato verificado</b>
+                        <ul>
+                            <li>Augustus De Morgan publicó estas leyes en su libro <i>Formal Logic</i> (1847); la idea
+                                ya aparecía en trabajos de lógicos medievales como Guillermo de Ockham.</li>
+                            <li>George Boole (1854, <i>Las leyes del pensamiento</i>) desarrolló el álgebra que une la
+                                lógica con las operaciones entre conjuntos: hoy se llama álgebra de Boole.</li>
+                            <li>En programación y electrónica se usan a diario: NOT (a AND b) equivale a (NOT a) OR (NOT
+                                b), y es la base de las compuertas NAND y NOR.</li>
+                            <li>También valen para tres o más conjuntos: (A ∪ B ∪ C)ᶜ = Aᶜ ∩ Bᶜ ∩ Cᶜ.</li>
+                        </ul>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section id="historia">
+        <h2>🧑‍🔬 Personajes que hicieron historia</h2>
+        <p class="sub">Las ideas de esta unidad nacieron de personas curiosas como tú.</p>
+        <div class="grid">
+            <div class="card" style="--c:#7b4dff"><img loading="lazy"
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Georg_Cantor2.jpg?width=200"
+                    alt="Georg Cantor" data-fb="Georg Cantor" data-k="0" onerror="window.fb&&fb(this)">
+                <h3>Georg Cantor</h3><b>1845 – 1918</b>
+                <p>Matemático alemán, creador de la teoría de conjuntos y del estudio de los conjuntos infinitos.</p>
+            </div>
+            <div class="card" style="--c:#f5a623"><img loading="lazy"
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/John_Venn.jpg?width=200" alt="John Venn"
+                    data-fb="John Venn" data-k="1" onerror="window.fb&&fb(this)">
+                <h3>John Venn</h3><b>1834 – 1923</b>
+                <p>Lógico británico que popularizó los diagramas con círculos que hoy llevan su nombre.</p>
+            </div>
+            <div class="card" style="--c:#1fb58f"><img loading="lazy"
+                    src="https://matematics.wordpress.com/wp-content/uploads/2018/04/e5cbf-demorgan.gif?w=500"
+                    alt="Augustus De Morgan" data-fb="Augustus De Morgan" data-k="2" onerror="window.fb&&fb(this)">
+                <h3>Augustus De Morgan</h3><b>1806 – 1871</b>
+                <p>Matemático británico que formuló las leyes que unen la lógica con los conjuntos.</p>
+            </div>
+            <div class="card" style="--c:#e8467c"><img loading="lazy"
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Leonhard_Euler.jpg?width=200"
+                    alt="Leonhard Euler" data-fb="Leonhard Euler" data-k="3" onerror="window.fb&&fb(this)">
+                <h3>Leonhard Euler</h3><b>1707 – 1783</b>
+                <p>Matemático suizo que usó círculos para representar razonamientos lógicos antes que Venn.</p>
+            </div>
+            <div class="card" style="--c:#3b82f6"><img loading="lazy"
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/George_Boole_color.jpg?width=200"
+                    alt="George Boole" data-fb="George Boole" data-k="4" onerror="window.fb&&fb(this)">
+                <h3>George Boole</h3><b>1815 – 1864</b>
+                <p>Matemático británico que creó el álgebra de la lógica, base de la computación actual.</p>
+            </div>
+            <div class="card" style="--c:#16a085"><img loading="lazy"
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Giuseppe_Peano.jpg?width=200"
+                    alt="Giuseppe Peano" data-fb="Giuseppe Peano" data-k="5" onerror="window.fb&&fb(this)">
+                <h3>Giuseppe Peano</h3><b>1858 – 1932</b>
+                <p>Matemático italiano que introdujo los símbolos ∈, ∪ y ∩ que usamos hoy.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ejemplos">
+        <h2>🧩 Ejemplos resueltos y consulta rápida</h2>
+        <p class="sub"><span class="tag" style="background:#1fb58f">6°</span> conteo con Venn · <span class="tag"
+                style="background:#7b4dff">11°</span> lógica y demostración</p>
+        <div class="grid2">
+            <div class="card" style="--c:#1fb58f">
+                <h3>🏅 Problema de conteo</h3>
+                <p>En un curso de 30 estudiantes, 18 juegan fútbol, 15 baloncesto y 7 practican ambos. ¿Cuántos juegan
+                    al menos un deporte? ¿Cuántos ninguno?</p>
+                <figure><svg viewBox="0 0 200 110">
+                        <rect x="2" y="2" width="196" height="106" rx="6" fill="#fff" stroke="#333" stroke-width="2" />
+                        <circle cx="78" cy="55" r="40" fill="#7b4dff" fill-opacity=".45" />
+                        <circle cx="122" cy="55" r="40" fill="#f5a623" fill-opacity=".45" /><text x="55" y="60"
+                            font-weight="700">11</text><text x="95" y="60" font-weight="700">7</text><text x="138"
+                            y="60" font-weight="700">8</text><text x="12" y="20">Fútbol</text><text x="150"
+                            y="20">Baloncesto</text><text x="170" y="100">4</text>
+                    </svg></figure>
+                <p>|F ∪ K| = 18 + 15 − 7 = <b>26</b>. Ninguno: 30 − 26 = <b>4</b>. Solo fútbol: 11. Solo baloncesto: 8.
+                </p>
+            </div>
+            <div class="card" style="--c:#7b4dff">
+                <h3>🔗 Lógica ↔ Conjuntos</h3>
+                <table>
+                    <tr>
+                        <th>Conjuntos</th>
+                        <th>Lógica</th>
+                    </tr>
+                    <tr>
+                        <td>∪ Unión</td>
+                        <td>∨ O</td>
+                    </tr>
+                    <tr>
+                        <td>∩ Intersección</td>
+                        <td>∧ Y</td>
+                    </tr>
+                    <tr>
+                        <td>Aᶜ Complemento</td>
+                        <td>¬ NO</td>
+                    </tr>
+                    <tr>
+                        <td>A ⊆ B</td>
+                        <td>x ∈ A ⟹ x ∈ B</td>
+                    </tr>
+                    <tr>
+                        <td>A = B</td>
+                        <td>x ∈ A ⟺ x ∈ B</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card" style="--c:#e8467c">
+                <h3>📚 Glosario</h3>
+                <ul>
+                    <li><b>Elemento:</b> objeto que forma parte de un conjunto.</li>
+                    <li><b>Universo (U):</b> conjunto que contiene todos los elementos en estudio.</li>
+                    <li><b>Disjuntos:</b> sin elementos comunes.</li>
+                    <li><b>Cardinalidad |A|:</b> cantidad de elementos de A.</li>
+                    <li><b>Predicado P(x):</b> propiedad que cumple x.</li>
+                    <li><b>Cuantificador ∀:</b> "para todo".</li>
+                    <li><b>Cuantificador ∃:</b> "existe al menos un".</li>
+                    <li><b>Conjunto potencia P(A):</b> conjunto de todos los subconjuntos de A.</li>
+                </ul>
+            </div>
+            <div class="card" style="--c:#f5a623">
+                <h3>🎨 Problema con tres conjuntos · 11°</h3>
+                <p>En un curso de 40 estudiantes: 20 prefieren Matemáticas (M), 18 Lectura (L) y 15 Arte (A). Además
+                    |M ∩ L| = 8, |M ∩ A| = 6, |L ∩ A| = 5 y |M ∩ L ∩ A| = 3. ¿Cuántos prefieren al menos una
+                    área? ¿Cuántos ninguna?</p>
+                <p>|M ∪ L ∪ A| = 20 + 18 + 15 − 8 − 6 − 5 + 3 = <b>37</b>. Ninguna: 40 − 37 = <b>3</b>.</p>
+            </div>
+            <div class="card" style="--c:#3b82f6">
+                <h3>🪞 Tabla de verdad de De Morgan</h3>
+                <p>Comprueba ¬(P ∨ Q) ⟺ ¬P ∧ ¬Q (V = verdadero, F = falso):</p>
+                <table>
+                    <tr>
+                        <th>P</th>
+                        <th>Q</th>
+                        <th>P ∨ Q</th>
+                        <th>¬(P ∨ Q)</th>
+                        <th>¬P ∧ ¬Q</th>
+                    </tr>
+                    <tr>
+                        <td>V</td>
+                        <td>V</td>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>V</td>
+                        <td>F</td>
+                        <td>F</td>
+                    </tr>
+                    <tr>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>F</td>
+                        <td>V</td>
+                        <td>V</td>
+                    </tr>
+                </table>
+                <p>Las dos últimas columnas son iguales en todas las filas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>🎬 Videos</h2>
+        <p class="sub">Mira, pausa y repite cuantas veces quieras.</p>
+        <div class="vid">
+            <div>
+                <h4>¿Qué es un Conjunto? (Definición, Extensión y Comprensión)</h4><iframe
+                    src="https://www.youtube.com/embed/RHHA-bDhfGw" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div>
+                <h4>Simbología y Relaciones Fundamentales (∈, ⊆, ⊂, =)</h4><iframe
+                    src="https://www.youtube.com/embed/MY24oAocK4c" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div>
+                <h4>Clases de Conjuntos (Vacío, Finitos vs. Infinitos)</h4><iframe
+                    src="https://www.youtube.com/embed/ig79TjxOiz4" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div>
+                <h4>Operaciones Entre Conjuntos (∪, ∩, ∖, Aᶜ)</h4><iframe
+                    src="https://www.youtube.com/embed/nRfQ7a8GMF0" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div>
+                <h4>Diagramas de Venn y Razonamiento Lógico</h4><iframe src="https://www.youtube.com/embed/YZRRUFG2UOY"
+                    allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div>
+                <h4>Leyes de De Morgan y Propiedades Algebraicas</h4><iframe
+                    src="https://www.youtube.com/embed/2JzZr7YUbdY" allowfullscreen loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="actividades">
+        <div class="act" style="padding:34px 18px">
+            <h2 style="font-size:2.6rem">actividades</h2>
+            <button class="btn" onclick="tp()">🧭 La Brújula del Razonamiento</button>
+        </div>
+        <div class="proof" id="proof">
+            <div class="tabs"><button class="tab on" onclick="lv(0,this)">🟢 Nivel Fácil</button><button class="tab"
+                    onclick="lv(1,this)">🔴 Nivel Difícil</button></div>
+            <div id="l0">
+                <h3 style="text-align:center">A ∪ B = B ∪ A</h3>
+                <p>Demuestra que el orden en que se unen dos conjuntos no altera el resultado final, utilizando el
+                    método de Doble Inclusión en pasos muy sencillos.</p>
+                <h4>Paso 1: Estrategia Lógica (Ida y Vuelta)</h4>
+                <p>Para demostrar que dos conjuntos son iguales (A ∪ B = B ∪ A), debemos probar dos inclusiones:</p>
+                <ol>
+                    <li><b>Ida (⊆):</b> Probar que todo elemento que está en (A ∪ B) también pertenece a (B ∪ A).</li>
+                    <li><b>Vuelta (⊇):</b> Probar que todo elemento que está en (B ∪ A) también pertenece a (A ∪ B).
+                    </li>
+                </ol>
+                <h4>Paso 2: Desarrollo Paso a Paso</h4>
+                <h4>🔹 Parte 1: Demostrar que (A ∪ B) ⊆ (B ∪ A) (Ida)</h4>
+                <div class="scroll">
+                    <table>
+                        <tr>
+                            <th>N.º</th>
+                            <th>Paso Analítico</th>
+                            <th>Justificación Lógica (Regla / Definición)</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Sea x ∈ (A ∪ B)</td>
+                            <td>Tomamos un elemento cualquiera x del conjunto de la izquierda.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>x ∈ A ∨ x ∈ B</td>
+                            <td>Por definición de unión (x ∈ X ∪ Y ⟺ x ∈ X ∨ x ∈ Y).</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>x ∈ B ∨ x ∈ A</td>
+                            <td>Por propiedad conmutativa de la disyunción en lógica (P ∨ Q ⟺ Q ∨ P).</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>x ∈ (B ∪ A)</td>
+                            <td>Por definición de unión.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Conclusión 1</b></td>
+                            <td>(A ∪ B) ⊆ (B ∪ A)</td>
+                            <td>Todo elemento de (A ∪ B) pertenece a (B ∪ A).</td>
+                        </tr>
+                    </table>
+                </div>
+                <h4>🔹 Parte 2: Demostrar que (B ∪ A) ⊆ (A ∪ B) (Vuelta)</h4>
+                <div class="scroll">
+                    <table>
+                        <tr>
+                            <th>N.º</th>
+                            <th>Paso Analítico</th>
+                            <th>Justificación Lógica (Regla / Definición)</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Sea y ∈ (B ∪ A)</td>
+                            <td>Tomamos un elemento cualquiera y del conjunto de la derecha.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>y ∈ B ∨ y ∈ A</td>
+                            <td>Por definición de unión.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>y ∈ A ∨ y ∈ B</td>
+                            <td>Por propiedad conmutativa de la disyunción en lógica (Q ∨ P ⟺ P ∨ Q).</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>y ∈ (A ∪ B)</td>
+                            <td>Por definición de unión.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Conclusión 2</b></td>
+                            <td>(B ∪ A) ⊆ (A ∪ B)</td>
+                            <td>Todo elemento de (B ∪ A) pertenece a (A ∪ B).</td>
+                        </tr>
+                    </table>
+                </div>
+                <h4>Paso 3: Conclusión Final</h4>
+                <p>Al unir ambas inclusiones, se escribe el cierre matemático formal:</p>
+                <div class="f">Dado que (A ∪ B) ⊆ (B ∪ A) y (B ∪ A) ⊆ (A ∪ B),</div>
+                <div class="f">Por propiedad de Doble Inclusión, se concluye que:</div>
+                <div class="f"><b>A ∪ B = B ∪ A ■</b></div>
+            </div>
+            <div id="l1" style="display:none">
+                <h3 style="text-align:center">A ∖ B = A ∩ Bᶜ</h3>
+                <h4>Paso 1: Estrategia Lógica (Doble Inclusión)</h4>
+                <p>Para demostrar que A ∖ B = A ∩ Bᶜ, probamos dos caminos:</p>
+                <ol>
+                    <li><b>Ida (⊆):</b> Si un elemento pertenece a la diferencia (A ∖ B), entonces pertenece a (A ∩ Bᶜ).
+                    </li>
+                    <li><b>Vuelta (⊇):</b> Si un elemento pertenece a (A ∩ Bᶜ), entonces pertenece a la diferencia (A ∖
+                        B).</li>
+                </ol>
+                <h4>Paso 2: Desarrollo Analítico Paso a Paso</h4>
+                <h4>🔹 Parte 1: Demostrar que (A ∖ B) ⊆ (A ∩ Bᶜ) (Ida)</h4>
+                <div class="scroll">
+                    <table>
+                        <tr>
+                            <th>N.º</th>
+                            <th>Paso Analítico</th>
+                            <th>Justificación Lógica (Regla / Definición)</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Sea x ∈ (A ∖ B)</td>
+                            <td>Tomamos un elemento genérico x del conjunto diferencia.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>x ∈ A ∧ x ∉ B</td>
+                            <td>Por definición de diferencia de conjuntos.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>x ∈ A ∧ x ∈ Bᶜ</td>
+                            <td>Por definición de complemento (x ∉ B ⟺ x ∈ Bᶜ).</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>x ∈ (A ∩ Bᶜ)</td>
+                            <td>Por definición de intersección (x ∈ X ∧ x ∈ Y ⟺ x ∈ X ∩ Y).</td>
+                        </tr>
+                        <tr>
+                            <td><b>Conclusión 1</b></td>
+                            <td>(A ∖ B) ⊆ (A ∩ Bᶜ)</td>
+                            <td>Todo elemento de la diferencia pertenece a A ∩ Bᶜ.</td>
+                        </tr>
+                    </table>
+                </div>
+                <h4>🔹 Parte 2: Demostrar que (A ∩ Bᶜ) ⊆ (A ∖ B) (Vuelta)</h4>
+                <div class="scroll">
+                    <table>
+                        <tr>
+                            <th>N.º</th>
+                            <th>Paso Analítico</th>
+                            <th>Justificación Lógica (Regla / Definición)</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Sea y ∈ (A ∩ Bᶜ)</td>
+                            <td>Tomamos un elemento genérico y del segundo conjunto.</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>y ∈ A ∧ y ∈ Bᶜ</td>
+                            <td>Por definición de intersección.</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>y ∈ A ∧ y ∉ B</td>
+                            <td>Por definición de complemento (y ∈ Bᶜ ⟺ y ∉ B).</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>y ∈ (A ∖ B)</td>
+                            <td>Por definición de diferencia de conjuntos.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Conclusión 2</b></td>
+                            <td>(A ∩ Bᶜ) ⊆ (A ∖ B)</td>
+                            <td>Todo elemento de A ∩ Bᶜ pertenece a la diferencia.</td>
+                        </tr>
+                    </table>
+                </div>
+                <h4>Paso 3: Conclusión Formal</h4>
+                <p>Al unir las dos conclusiones:</p>
+                <div class="f">Dado que (A ∖ B) ⊆ (A ∩ Bᶜ) y (A ∩ Bᶜ) ⊆ (A ∖ B),</div>
+                <div class="f">Por el método de Doble Inclusión, se concluye que:</div>
+                <div class="f"><b>A ∖ B = A ∩ Bᶜ ■</b></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JUEGOS: ahora viven en juegos.html -->
+    <section id="juegos">
+        <h2>🎮 Juegos Interactivos</h2>
+        <p class="sub">¡Aprende jugando! Los juegos están en su propia página.</p>
+        <div class="gate">
+            <div>
+                <h3>🚀 Entra al Parque de Juegos</h3>
+                <p>Cada juego te da XP y medallas. Tu progreso se guarda y se comparte con esta página.</p>
+                <ul>
+                    <li>🃏 Memoria de símbolos</li>
+                    <li>❓ Verdadero o Falso</li>
+                    <li>🔵 Reto Venn</li>
+                    <li>🗺️ Selecciona las regiones (nuevo)</li>
+                    <li>🧮 Calculadora de conjuntos</li>
+                </ul>
+                <a class="btn" href="juegos.html">🎮 ¡Jugar ahora!</a>
+            </div>
+            <div class="kids" data-kids="1,4,2"></div>
+        </div>
+    </section>
+
+    <!-- Aquí script.js inserta "Curiosidades y Retos" (antes de #actividades) y "Mis logros" (antes de #rubrica) -->
+
+    <section id="rubrica">
+        <h2>📋 Rúbrica de Evaluación por Niveles de Aplicación</h2>
+        <div class="scroll">
+            <table class="rub">
+                <tr>
+                    <th>Criterio de Evaluación</th>
+                    <th></th>
+                    <th>⭐ Excelente (Nivel 4)</th>
+                    <th>✅ Satisfactorio (Nivel 3)</th>
+                    <th>⚠️ En Proceso (Nivel 2)</th>
+                    <th>❌ Inicial (Nivel 1)</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><b>Pensamiento Lógico y Justificación</b></td>
+                    <td>Construye y justifica demostraciones formales usando notación abstracta (∈, ⊆, ⟺) de manera
+                        impecable y rigurosa.</td>
+                    <td>Construye y justifica demostraciones formales con mínimos errores de notación o lógica.</td>
+                    <td>Define conceptos parcialmente, pero comete errores en la estructuración de argumentos o
+                        demostraciones.</td>
+                    <td>No distingue la notación formal o confunde de manera reiterada los conceptos lógicos básicos.
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><b>Álgebra y Operaciones de Conjuntos</b></td>
+                    <td colspan="4">Domina con precisión las operaciones de unión (∪), intersección (∩), diferencia (∖)
+                        y representándolas correctamente en Diagramas de Venn.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><b>Finitud, Infinitud y Cardinalidad</b></td>
+                    <td colspan="4">Clasifica e interpreta la cardinalidad (|A|) de conjuntos finitos e infinitos (ℕ, ℤ,
+                        ℚ, ℝ) aplicando la noción de biyección.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><b>Modelado y Resolución de Problemas</b></td>
+                    <td colspan="4">Plantea y resuelve problemas complejos del entorno real aplicando operaciones de
+                        conjuntos y Diagramas de Venn, justificando cada paso.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><b>Demostración de Leyes y Propiedades</b></td>
+                    <td colspan="4">Demuestra de forma analítica y sintética las Leyes de De Morgan y las propiedades
+                        algebraicas usando doble inclusión.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><b>Participación y Actitud Colaborativa</b></td>
+                    <td colspan="4">Lidera las actividades grupales, orienta a sus compañeros en la solución de retos y
+                        muestra entusiasmo constante ante el aprendizaje.</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <footer>🌟 Lógica y Teoría de Conjuntos · Grados 6° y 11°</footer>
+
+    <script src="common.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
